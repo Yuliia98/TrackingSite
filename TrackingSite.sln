@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34031.279
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrackingSite", "TrackingSite\TrackingSite.csproj", "{B27E8813-B756-4741-BEE2-333FCC82CAF3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Task2", "Task2\Task2.csproj", "{CE77B66B-525E-467C-90A6-46183303DCCA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task3", "Task3\Task3.csproj", "{FEBEDCB9-32B4-44E3-B460-11B203C37B56}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B27E8813-B756-4741-BEE2-333FCC82CAF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B27E8813-B756-4741-BEE2-333FCC82CAF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B27E8813-B756-4741-BEE2-333FCC82CAF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B27E8813-B756-4741-BEE2-333FCC82CAF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE77B66B-525E-467C-90A6-46183303DCCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE77B66B-525E-467C-90A6-46183303DCCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE77B66B-525E-467C-90A6-46183303DCCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE77B66B-525E-467C-90A6-46183303DCCA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEBEDCB9-32B4-44E3-B460-11B203C37B56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEBEDCB9-32B4-44E3-B460-11B203C37B56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEBEDCB9-32B4-44E3-B460-11B203C37B56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEBEDCB9-32B4-44E3-B460-11B203C37B56}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EB502930-78BB-4D90-B1A9-58C9012FE2DC}
+	EndGlobalSection
+EndGlobal
