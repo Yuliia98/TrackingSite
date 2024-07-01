@@ -12,8 +12,6 @@ namespace TrackingSite.StepDefinitions
     public class TrackingSiteStepDefinitions
     {
         public IWebDriver _driver;
-        public string _url;
-        public string _title;
         public LoginPage _loginPage;
         public MainSitePage _mainSitePage;
         public TrackingTablePage _trackingTablePage;
@@ -25,9 +23,9 @@ namespace TrackingSite.StepDefinitions
             options.AddArgument("--start-maximized");
             _driver = new ChromeDriver(options);
             _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
-            _loginPage = new LoginPage(_driver, _url, _title);
-            _mainSitePage = new MainSitePage(_driver, _url, _title);
-            _trackingTablePage = new TrackingTablePage(_driver, _url, _title);
+            _loginPage = new LoginPage(_driver);
+            _mainSitePage = new MainSitePage(_driver);
+            _trackingTablePage = new TrackingTablePage(_driver);
         }
 
 
@@ -38,28 +36,42 @@ namespace TrackingSite.StepDefinitions
             _loginPage.Login(user.UserName, user.Password);
         }
 
+        [Given("I am on login screen")]
+        public void OpenLoginPage() =>
+            _loginPage.NavigateTo();
+
         [When("I navigate to (.*) page from main site")]
         public void NavigateToPageFromMainSite(string pageAlias) =>
             _mainSitePage.ClickOnElementByAlias(pageAlias);
 
+        [When("I enter a credentials for (.*) user and submit")]
+        public void EnterCredentialsForUserAndClickSubmit(string userAlias)
+        {
+            User user = GetUserEntityByName(userAlias);
+            _loginPage.EnterCredentials(user.UserName, user.Password);
+            _loginPage.ClickOnLoginButton();
+        }
+
         [Then("Login page is displayed")]
         public void VerifyLoginPageIsDisplayed()
         {
-            Assert.Multiple(() =>
-            {
-                Assert.IsTrue(_loginPage.IsPageOpenedByUrl(_loginPage._url), $"Current URL is not as expected!");
-                Assert.IsTrue(_loginPage.IsUserNameFieldDisplayed(), $"Login element is not prsent on page!");
-            });
+            _loginPage.WaitForOpened();
+            Assert.IsTrue(_loginPage.IsUserNameFieldDisplayed(), $"Login element is not prsent on page!");
         }
 
         [Then("Tracking page is displayed")]
         public void VerifyTrackingTablePageIsDisplayed()
         {
-            Assert.Multiple(() =>
-            {
-                Assert.IsTrue(_trackingTablePage.IsPageOpenedByUrl(_trackingTablePage._url), $"Current URL is not as expected!");
-                Assert.IsTrue(_trackingTablePage.IsTrackingTableDisplayed(), $"Table is not prsent on Tracking page!");
-            });
+            _trackingTablePage.WaitForOpened();
+             Assert.IsTrue(_trackingTablePage.IsTrackingTableDisplayed(), $"Table is not prsent on Tracking page!");
+        }
+
+        [Then("I am logged in successfully")]
+        public void VerifySuccessfullLogin()
+        {
+            _mainSitePage.WaitForOpened();
+            _mainSitePage.ClickOnElementByAlias("Tracking");
+            VerifyTrackingTablePageIsDisplayed();
         }
 
         [Then("'([^']*)' error message is displayed on Login page")]

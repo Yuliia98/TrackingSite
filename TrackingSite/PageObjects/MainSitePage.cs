@@ -5,18 +5,20 @@ namespace TrackingSite.PageObjects
     public class MainSitePage : BasePageUtils
     {
         private Dictionary<string, By> _elementAliases;
+        private const string PageUrl = "/main";
+        private const string PageTitle = "Main";
+        public const string Dashboards = "Dashboards";
+        public const string Charts = "Charts";
+        public const string Tracking = "Tracking";
 
-        public MainSitePage(IWebDriver driver, string url, string title) : base(driver, url, title)
+        public MainSitePage(IWebDriver driver) : base(driver, PageUrl, PageTitle)
         {
-            _url = "https://qa.sorted.com/newtrack/main";
-            _title = "Main";
-
             //options of header menu in tracking site after login
             _elementAliases = new Dictionary<string, By>
             {
-                { "Dashboards", By.CssSelector("#tckDataBtn")},
-                { "Charts", By.Id("chartsBtn") },
-                { "Tracking", By.XPath(".//button[@id='trackTableBtn']") }
+                { Dashboards, By.CssSelector("#tckDataBtn")},
+                { Charts, By.Id("chartsBtn") },
+                { Tracking, By.XPath(".//button[@id='trackTableBtn']") }
             };
         }
 

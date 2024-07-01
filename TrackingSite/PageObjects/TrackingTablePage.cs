@@ -5,13 +5,17 @@ namespace TrackingSite.PageObjects
     public class TrackingTablePage : BasePageUtils
     {
         private By Table => By.CssSelector("#trckTable");
+        private const string PageUrl = "/main";
+        private const string PageTitle = "Main";
 
-        public TrackingTablePage(IWebDriver driver, string url, string title) : base(driver, url, title)
+        public TrackingTablePage(IWebDriver driver) : base(driver, PageUrl, PageTitle)
         {
-            _url = "https://qa.sorted.com/newtrack/trackingTable";
-            _title = "Tracking";
+
         }
 
         public bool IsTrackingTableDisplayed() => _driver.FindElement(Table).Displayed;
+
+        public bool IsTrackingPageOpened() =>
+            IsPageOpenedByUrl(_pageUrl);
     }
 }

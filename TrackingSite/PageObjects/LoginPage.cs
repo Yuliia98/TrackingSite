@@ -4,20 +4,22 @@ namespace TrackingSite.PageObjects
 {
     public class LoginPage : BasePageUtils
     {
+        private const string PageUrl = "/login";
+        private const string PageTitle = "Login";
+
         private By UserNameField => By.CssSelector("#usrNmInput");
         private By PasswordField => By.Id("pswdInput");
         private By LoginButton => By.XPath(".//button[@id='loginBtn']");
         private By ErrorMessageLabel => By.Id("errMsgLbl");
 
-        public LoginPage(IWebDriver driver, string url, string title) : base(driver, url, title)
+        public LoginPage(IWebDriver driver) : base(driver, PageUrl, PageTitle)
         {
-            _url = "https://qa.sorted.com/newtrack/login";
-            _title = "Login";
+
         }
 
         public void GoToLoginPage()
         {
-            _driver.Navigate().GoToUrl(_url);
+            NavigateTo();
             WaitForOpened();
         }
 
@@ -42,5 +44,8 @@ namespace TrackingSite.PageObjects
 
         public string GetErrorMessageText() =>
             _driver.FindElement(ErrorMessageLabel).Text;
+
+        public bool IsLoginPageOpened() =>
+            IsPageOpenedByUrl(_pageUrl);
     }
 }
