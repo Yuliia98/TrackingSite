@@ -6386,11 +6386,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Yuliia_Shyshman\\source\\repos\\TrackingSite\\Task3\\Task3.csproj",
+      "projectUniqueName": "C:\\Users\\Yuliia_Shyshman\\source\\repos\\test\\TrackingSite\\Task3\\Task3.csproj",
       "projectName": "Task3",
-      "projectPath": "C:\\Users\\Yuliia_Shyshman\\source\\repos\\TrackingSite\\Task3\\Task3.csproj",
+      "projectPath": "C:\\Users\\Yuliia_Shyshman\\source\\repos\\test\\TrackingSite\\Task3\\Task3.csproj",
       "packagesPath": "C:\\Users\\Yuliia_Shyshman\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Yuliia_Shyshman\\source\\repos\\TrackingSite\\Task3\\obj\\",
+      "outputPath": "C:\\Users\\Yuliia_Shyshman\\source\\repos\\test\\TrackingSite\\Task3\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Yuliia_Shyshman\\AppData\\Roaming\\NuGet\\NuGet.Config",

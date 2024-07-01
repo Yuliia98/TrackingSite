@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Yuliia_Shyshman\\source\\repos\\TrackingSite\\TrackingSite\\TrackingSite.csproj": {}
+    "C:\\Users\\Yuliia_Shyshman\\source\\repos\\test\\TrackingSite\\TrackingSite\\TrackingSite.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Yuliia_Shyshman\\source\\repos\\TrackingSite\\TrackingSite\\TrackingSite.csproj": {
+    "C:\\Users\\Yuliia_Shyshman\\source\\repos\\test\\TrackingSite\\TrackingSite\\TrackingSite.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Yuliia_Shyshman\\source\\repos\\TrackingSite\\TrackingSite\\TrackingSite.csproj",
+        "projectUniqueName": "C:\\Users\\Yuliia_Shyshman\\source\\repos\\test\\TrackingSite\\TrackingSite\\TrackingSite.csproj",
         "projectName": "TrackingSite",
-        "projectPath": "C:\\Users\\Yuliia_Shyshman\\source\\repos\\TrackingSite\\TrackingSite\\TrackingSite.csproj",
+        "projectPath": "C:\\Users\\Yuliia_Shyshman\\source\\repos\\test\\TrackingSite\\TrackingSite\\TrackingSite.csproj",
         "packagesPath": "C:\\Users\\Yuliia_Shyshman\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Yuliia_Shyshman\\source\\repos\\TrackingSite\\TrackingSite\\obj\\",
+        "outputPath": "C:\\Users\\Yuliia_Shyshman\\source\\repos\\test\\TrackingSite\\TrackingSite\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Yuliia_Shyshman\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -44,6 +44,10 @@
             "FluentAssertions": {
               "target": "Package",
               "version": "[6.2.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[9.0.0-preview.5.24306.7, )"
             },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "C/Bkr5YQC5X2zTn8NLDDdpIKCBTTDs2deU+JOIBm3USOXniWJIX1QusNLRJxu4o3hM2xHdzKsrMz8AgxT+uVqw==",
+  "dgSpecHash": "GYmUORn0yTYtZSiKTkAE7cAEIiIzOm52kTUHaFNB8ib3OY3/iPV6nMjPempug+yeherAKvGrLu2BQYd1c/9hXA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Yuliia_Shyshman\\source\\repos\\TrackingSite\\Task2\\Task2.csproj",
+  "projectFilePath": "C:\\Users\\Yuliia_Shyshman\\source\\repos\\test\\TrackingSite\\Task2\\Task2.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Yuliia_Shyshman\\.nuget\\packages\\bodi\\1.5.0\\bodi.1.5.0.nupkg.sha512",
     "C:\\Users\\Yuliia_Shyshman\\.nuget\\packages\\fluentassertions\\6.2.0\\fluentassertions.6.2.0.nupkg.sha512",
